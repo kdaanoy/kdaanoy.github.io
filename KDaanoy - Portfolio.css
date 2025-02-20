@@ -1,0 +1,541 @@
+body {
+    background-color: #181717;
+    animation: transitionIn 0.9s;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    /* font-weight: 700; */
+    /* font-style: italic; */
+}
+  
+@keyframes transitionIn{
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*------------------------------------------- NAVIGTION BAR -------------------------------------------*/
+
+.mainNav{
+    /* position: fixed; */
+    display: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    padding: 0.8em 3%;
+    /* border-radius: 0px 0px 35px 35px;
+    border-bottom: 4px solid #222020; */
+    transition: top 0.3s ease-in-out;
+    background-color: #181717;
+}
+
+
+.mainNav b{
+    color: rgb(255, 255, 255);
+}
+
+.mainNav .home{
+    margin-right: auto;
+    font-size: 3vh;
+    color: rgb(255, 255, 255)
+}
+
+.mainNav .home:hover{
+    color: #8b91a3;
+}
+
+.mainNav a{
+    background: none;
+    border: none;
+    color: #8b91a3;
+    text-decoration: none;
+    font-size: 1.8vh;
+    cursor: pointer;
+}
+
+.mainNav a{
+    display: inline-block;
+    padding: 15px 15px;
+    transition: color 0.3s ease;
+}
+
+.home a:hover,
+.mainNav a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.cv{
+    border: 2px solid white;
+    border-radius: 14px;
+    padding: 8px;
+}
+
+.contactBar {
+    position: fixed;
+    bottom: 0px;
+    left: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: none;
+    z-index: 999;
+    gap: 2px
+}
+
+.contactBar a {
+    width: 30px;  /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+}
+
+.contactBar .icon img{
+    width: 100%;  /* Ensure image fills the <a> */
+    height: auto;  /* Maintain aspect ratio */
+    filter: invert(1);
+    transition: transform 0.2s ease-in;
+
+}
+
+.contactBar .icon img:hover{
+    transform: scale(1.3);
+}
+
+.contactBar .line img{
+    padding: px;
+    width: 30px;  /* Ensure image fills the <a> */
+    height: 25px;  /* Maintain aspect ratio */
+    filter: invert(1);
+}
+
+.sectionBar {
+    position: fixed;
+    bottom: 0px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: none;
+    z-index: 999;
+    gap: 2px
+}
+
+.sectionBar a {
+    width: 30px;  /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+}
+
+.sectionBar .icon img{
+    width: 100%;  /* Ensure image fills the <a> */
+    height: auto;  /* Maintain aspect ratio */
+    filter: invert(1);
+    transition: transform 0.2s ease-in;
+
+}
+
+.sectionBar .icon img:hover{
+    transform: scale(1.3);
+}
+
+.sectionBar .line img{
+    padding: px;
+    width: 30px;  /* Ensure image fills the <a> */
+    height: 25px;  /* Maintain aspect ratio */
+    filter: invert(1);
+}
+
+.contactBar .verticalline{
+    width: 1px;
+    background-color: white;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    transform: translateY(-10px);
+    margin-top: 10px;
+}
+
+.sectionBar .verticalline{
+    width: 1px;
+    background-color: white;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    transform: translateY(-10px);
+    margin-top: 10px;
+}
+
+.projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10vh;
+    
+}
+
+.projectlist .projectitem .projectlink{
+    width: 1000px;
+    display: block;
+    padding: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0);
+    transition: 0.5s ease;
+}
+
+.projectlist .projectitem .projectlink:hover{
+    border-color: rgb(173, 173, 173);
+}
+
+.projectlist .projectitem .projectlink img{
+    width: 100%;
+    border-radius: 30px;
+}
+
+.projectlist .projectitem .badge{
+    color: rgb(231, 226, 236);
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: rgb(98, 33, 162);
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.projectlist .projectlink:hover .material-symbols-outlined{
+    color: white;
+    background:  rgb(98, 33, 162);
+    border: 2px solid  rgb(98, 33, 162);
+    transition: ease-in 0.2s;
+}
+
+.projectlist .projectitem{
+    list-style: none;
+}
+
+.projectlist .projectitem .projectdescription{
+    color:  white;
+}
+
+.projectlist .projectlink .material-symbols-outlined{
+    height: 35px;
+    width: 35px;
+    color: white;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid white;
+    transform: rotate(-45deg);
+}
+
+.experiences{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1vh;
+    padding-left: 0vh;
+    padding-bottom: 300px;
+}
+
+.experiences .images img{
+    display: flex;
+    filter: invert(1);
+    margin-bottom: 40px;
+}
+
+
+.experiences .images{
+    padding-right: 1em;
+}
+
+.experiences .images{
+    position: relative;
+    margin-top: 50px;
+}
+
+.experiences .imgcontainer{
+    border: solid rgb(100, 94, 94) transparent;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0);
+    border-radius: 1vh;
+}
+
+.explist .expitem .title{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: fit-content;
+}
+
+.explist .expitem .date{
+    color: white;
+}
+
+.explist .expitem{
+    list-style: none;
+    padding-bottom: 3vh;
+}
+
+.explist .expitem .explink:hover{
+    background-color: rgb(85, 84, 84);
+}
+
+.explist .expitem .expdescription{
+    color:  rgb(172, 169, 169);
+}
+
+.explist .expitem .explink{
+    width: 700px;
+    display: block;
+    padding: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0);
+    transition: 0.5s ease;
+}
+
+.explist .expitem .explink:hover{
+    border-color: rgb(173, 173, 173);
+}
+
+.experiencesdiv{
+    width: 750px;
+    background: transparent;
+    height: 550px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 1%;
+}
+
+.experiencesdiv::-webkit-scrollbar{
+    width: 0.8em;
+}
+
+.experiencesdiv::-webkit-scrollbar-track{
+    background:rgb(172, 169, 169);
+    border-radius: 10vh;
+}
+
+/*------------------------------------------- UNDER HEADER -------------------------------------------*/
+
+.about .row{
+    display: flex;
+    color: white;
+    padding: 1rem;
+    padding-bottom: 250px;
+}
+
+.highlighted{
+    color: white;
+}
+.about .words{
+    position: relative;
+    left: 0px;
+    top: 40px;
+    padding-right: 55px;
+    text-align: left;
+}
+
+.firstBodyTitle{
+    font-family: Arial Black;
+    font-size: 6vh;
+    position: relative;
+    font-family: Inter;
+    padding-bottom: 30px;
+}
+
+.firstBodySentence{
+    font-size: 2.5vh;
+    position: relative;
+    color: #aaaaaa;
+    word-spacing: 1px;
+    line-height: 35px;
+    padding-right: 200px;
+
+}
+
+.firstBodySentence3{
+    font-size: 2vh;
+    position: relative;
+    padding-left: 35vw;
+}
+
+/* .firstBody h1{
+    padding-left: 1vw;
+    font-size: 4vh;
+    color:rgb(255, 255, 255);
+}    */
+
+/* .firstBodyHeader{
+    font-family: Arial rgb(255, 255, 255);
+    position: relative;
+    padding-top: 4vh;
+    padding-left: 1vw;
+    font-size: 2.65vh;
+} */
+
+.firstBodyImage img{
+    width: 60%;
+    position: relative;
+    left: 250px;
+    top: -40px;
+}
+
+.scrolldown{
+    width: 4%;
+    position: relative;
+    left: 48%;
+    top: 75vh;
+    padding-bottom: 5vh;
+}
+
+.scrolldown2{
+    width: 4%;
+    position: relative;
+    left: 48%;
+    top:85vh;
+}
+
+
+/*------------------------------------------- COMP SECTION -------------------------------------------*/
+.htmlLinks{
+    text-decoration: none;
+}
+
+.comp1SectionHeading{
+    position: relative;
+    height: 90vh; 
+}   
+
+.comp2SectionHeading{
+    position: relative;
+    height: 55vh;
+}
+
+.comp3SectionHeading{
+    position: relative;
+    height: 76vh;
+}
+
+.comp1Text{
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 4vh;
+    position: relative;
+    top: 2vh;
+    padding-left: 1.9vw;
+}
+
+.comp1List ul{
+    list-style-type: none;
+    padding-top: 5vh;
+    position: relative;
+    padding-left: 4vw;
+    bottom: 60vh;
+    font-size: 2vh;
+}
+
+.comp1List li{
+    color: rgb(255, 255, 255);
+    padding-top: 2vh;   
+}
+
+.comp2List ul{
+    list-style-type: none;
+    padding-top: 5vh;
+    position: relative;
+    padding-left: 4vw;
+    bottom: 60vh;
+    font-size: 2.1vh;
+}
+
+.comp2List li{
+    color: rgb(255, 255, 255);
+    padding-top: 2vh;
+}
+
+.comp3List ul{
+    list-style-type: none;
+    padding-top: 5vh;
+    position: relative;
+    padding-left: 4vw;
+    bottom: 60vh;
+    font-size: 2vh;
+}
+
+.comp3List li{
+    color: rgb(255, 255, 255);
+    padding-top: 2vh;
+}
+
+.comp3List h4{
+    height: 0vh;
+}
+
+.ruleOut2{
+    padding-left: 2.2vw;
+    width: 5vh;
+    padding-top: 1.5vh;
+    position: relative;
+    bottom: 60vh;
+}
+
+.numberOne{
+    position: relative;
+    top: 12vh;
+    padding-left: 60vw;
+    color: white;
+    font-size: 50vh;
+}
+
+.numberTwo{
+    position: relative;
+    top: -6vh;
+    padding-left: 60vw;
+    color: white;
+    font-size: 50vh;
+}
+
+.numberThree{
+    position: relative;
+    top: 5vh;
+    padding-left: 60vw;
+    color: white;
+    font-size: 50vh;
+}
+
+
+/*------------------------------------------- FOOTER -------------------------------------------*/
+
+.footer{
+    height: 10vh;
+}
+
+.name{
+   font-size: 2vh; 
+   font-family: 'Inter';
+   padding-left: 35vw;
+   padding-top: 4vh;
+}
